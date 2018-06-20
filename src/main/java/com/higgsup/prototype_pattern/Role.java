@@ -1,15 +1,16 @@
 package com.higgsup.prototype_pattern;
 
-public class Role implements Cloneable  {
+public class Role implements Cloneable {
+
     private String value;
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
 
     public String getValue() {
         return value;
-    }
-
-    @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
     }
 
     public void setValue(String value) {
