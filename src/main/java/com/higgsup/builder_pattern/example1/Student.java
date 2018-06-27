@@ -9,6 +9,15 @@ public class Student {
         return name;
     }
 
+    public Student() {
+    }
+
+    public Student(String name, Integer age, String sex) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
