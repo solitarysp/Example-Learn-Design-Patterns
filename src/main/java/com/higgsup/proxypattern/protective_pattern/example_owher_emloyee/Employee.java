@@ -1,4 +1,4 @@
-package com.higgsup.proxypattern.proxypattern;
+package com.higgsup.proxypattern.protective_pattern.example_owher_emloyee;
 
 public class Employee implements Staff {
     private ReportGeneratorProxy reportGenerator;
