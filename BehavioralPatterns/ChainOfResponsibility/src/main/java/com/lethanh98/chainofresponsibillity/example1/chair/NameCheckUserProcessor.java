@@ -11,6 +11,8 @@ public class NameCheckUserProcessor extends CheckUserProcessor {
 
     @Override
     public boolean checkUserProcessor(UserEntity userEntity) {
+        System.out.println("Start check "+getClass().getCanonicalName());
+
         if (Objects.nonNull(userEntity.getName()) && userEntity.getName().length() > 0) {
             return this.next(userEntity);
         }
