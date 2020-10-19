@@ -1,9 +1,9 @@
-package com.lethanh98.chainofresponsibillity.example1.chair;
+package com.lethanh98.chainofresponsibillity.example1.chain;
 
 import com.lethanh98.chainofresponsibillity.example1.entity.UserEntity;
 
-public class AgeCheckUserProcessor extends CheckUserProcessor {
-    public AgeCheckUserProcessor(CheckUserProcessor nextProcessor) {
+public class PhoneFilterProcessor extends BaseFilterProcessor {
+    public PhoneFilterProcessor(BaseFilterProcessor nextProcessor) {
         super(nextProcessor);
     }
 

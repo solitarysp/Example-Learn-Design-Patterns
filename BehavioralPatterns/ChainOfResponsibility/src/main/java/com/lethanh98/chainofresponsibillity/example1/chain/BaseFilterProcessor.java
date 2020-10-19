@@ -1,4 +1,4 @@
-package com.lethanh98.chainofresponsibillity.example1.chair;
+package com.lethanh98.chainofresponsibillity.example1.chain;
 
 import com.lethanh98.chainofresponsibillity.example1.entity.UserEntity;
 import lombok.Data;
@@ -6,10 +6,10 @@ import lombok.Data;
 import java.util.Objects;
 
 @Data
-public abstract class CheckUserProcessor<T extends CheckUserProcessor> {
+public abstract class BaseFilterProcessor<T extends BaseFilterProcessor> {
     public T nextProcessor;
 
-    public CheckUserProcessor(T nextProcessor) {
+    public BaseFilterProcessor(T nextProcessor) {
         this.nextProcessor = nextProcessor;
     }
 

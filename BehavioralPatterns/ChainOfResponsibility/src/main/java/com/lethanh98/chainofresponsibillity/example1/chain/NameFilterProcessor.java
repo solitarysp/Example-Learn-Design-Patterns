@@ -1,11 +1,11 @@
-package com.lethanh98.chainofresponsibillity.example1.chair;
+package com.lethanh98.chainofresponsibillity.example1.chain;
 
 import com.lethanh98.chainofresponsibillity.example1.entity.UserEntity;
 
 import java.util.Objects;
 
-public class NameCheckUserProcessor extends CheckUserProcessor {
-    public NameCheckUserProcessor(CheckUserProcessor nextProcessor) {
+public class NameFilterProcessor extends BaseFilterProcessor {
+    public NameFilterProcessor(BaseFilterProcessor nextProcessor) {
         super(nextProcessor);
     }
 
