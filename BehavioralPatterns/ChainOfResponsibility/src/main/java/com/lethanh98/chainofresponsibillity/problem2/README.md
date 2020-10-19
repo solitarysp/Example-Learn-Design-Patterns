@@ -1,0 +1,1 @@
+- Demo vấn đề để khi nhớ thứ tự gọi validate. Và khó có thể thay đổi thứ tự process. Vì các cuộc gọi validate đang chồng chéo lên nhau

@@ -1,4 +1,4 @@
-package com.lethanh98.chainofresponsibillity.example1.entity;
+package com.lethanh98.chainofresponsibillity.cor1.entity;
 
 import lombok.Builder;
 import lombok.Data;

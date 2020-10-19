@@ -1,6 +1,6 @@
-package com.lethanh98.chainofresponsibillity.example1.chain;
+package com.lethanh98.chainofresponsibillity.cor1.chain;
 
-import com.lethanh98.chainofresponsibillity.example1.entity.UserEntity;
+import com.lethanh98.chainofresponsibillity.cor1.entity.UserEntity;
 import lombok.Data;
 
 import java.util.Objects;
