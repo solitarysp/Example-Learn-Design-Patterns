@@ -3,11 +3,13 @@ class Main{
     + main(String[] args)
 }
 class OrderService{
-    + boolean order(OrderEntity orderEntity)
+    + void order(OrderEntity orderEntity)
 }
 class BaseValidateOrderProcessor{
-    + boolean validate(OrderEntity orderEntity)
-    + boolean checkUserProcessor(OrderEntity orderEntity)
+    + NextLambda nextLambda;
+    +  ErrorLambda errorLambda;
+    +  boolean checkUserProcessor(OrderEntity orderEntity)
+    + void validate(OrderEntity orderEntity)
 }
 class TokenValidateProcess extends BaseValidateOrderProcessor {
     + boolean checkUserProcessor(OrderEntity orderEntity)
@@ -22,7 +24,6 @@ BaseValidateOrderProcessor --> TokenValidateProcess : 3: gọi đến TokenValid
 TokenValidateProcess --> BaseValidateOrderProcessor : 4: TokenValidateProcess trả lại kết quả validate token cho BaseValidateOrderProcessor
 BaseValidateOrderProcessor --> NumberOrderValidateProcess : 5: gọi đến NumberOrderValidateProcess \n  để validate number
 NumberOrderValidateProcess --> BaseValidateOrderProcessor : 6: NumberOrderValidateProcess \n trả lại kết quả validate number   cho BaseValidateOrderProcessor
-BaseValidateOrderProcessor --> OrderService : 7 BaseValidateOrderProcessor cố gắng gọi đến \n  trình xử lý tiếp theo nhưng không có để gọi. \n BaseValidateOrderProcessor trả về kết quả
-OrderService --> Main : 8: trả lại kết quả cho Main
+BaseValidateOrderProcessor --> OrderService : 7 BaseValidateOrderProcessor cố gắng gọi đến \n  trình xử lý tiếp theo nhưng không có để gọi. \n BaseValidateOrderProcessor trả về kết quả thông qua nextLambda
 
 @enduml
