@@ -1,0 +1,27 @@
+@startuml
+class Main{
+    + main(String[] args)
+}
+class OrderService{
+    + boolean order(OrderEntity orderEntity)
+}
+class BaseValidateOrderProcessor{
+    + boolean checkUserProcessor(OrderEntity orderEntity)
+}
+class TokenValidateProcess extends BaseValidateOrderProcessor {
+    + boolean tokenValidate(String token)
+}
+class NumberOrderValidateProcess  extends BaseValidateOrderProcessor{
+    + boolean numberOrderValidate(Integer numberOrder)
+}
+
+Main --> OrderService : 1: Gọi đến OrderService
+OrderService --> BaseValidateOrderProcessor : 2: gọi đến TokenValidateProcess để validate token \n thông qua method validate() trong BaseValidateOrderProcessor
+BaseValidateOrderProcessor --> TokenValidateProcess : 3: gọi đến TokenValidateProcess \n  để validate token
+TokenValidateProcess --> BaseValidateOrderProcessor : 4: TokenValidateProcess trả lại kết quả validate token cho BaseValidateOrderProcessor
+BaseValidateOrderProcessor --> NumberOrderValidateProcess : 5: gọi đến NumberOrderValidateProcess \n  để validate number
+NumberOrderValidateProcess --> BaseValidateOrderProcessor : 6: NumberOrderValidateProcess \n trả lại kết quả validate number   cho BaseValidateOrderProcessor
+BaseValidateOrderProcessor --> OrderService : 7 BaseValidateOrderProcessor cố gắng gọi đến \n  trình xử lý tiếp theo nhưng không có để gọi. \n BaseValidateOrderProcessor trả về kết quả
+OrderService --> Main : 8: trả lại kết quả cho Main
+
+@enduml
