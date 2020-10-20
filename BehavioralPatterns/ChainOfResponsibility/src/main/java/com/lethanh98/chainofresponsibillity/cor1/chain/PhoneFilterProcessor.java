@@ -9,9 +9,10 @@ public class PhoneFilterProcessor extends BaseFilterProcessor {
 
     @Override
     public boolean checkUserProcessor(UserEntity userEntity) {
-        if (userEntity.getAge() > 20) {
+        if (userEntity.getPhoneNumber().length() > 9) {
             return this.next(userEntity);
         }
+        System.out.println("Số lượng ký tự phone đang nhỏ hơn 9");
         return false;
     }
 }

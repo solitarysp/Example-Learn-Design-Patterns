@@ -13,6 +13,7 @@ public class ObjectFilterProcessor extends BaseFilterProcessor {
         if (Objects.nonNull(userEntity)) {
             return this.next(userEntity);
         }
+        System.out.println("object is null");
         return false;
     }
 }

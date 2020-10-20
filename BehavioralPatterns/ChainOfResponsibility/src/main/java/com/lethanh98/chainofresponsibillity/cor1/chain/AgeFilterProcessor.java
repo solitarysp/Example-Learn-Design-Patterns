@@ -9,9 +9,11 @@ public class AgeFilterProcessor extends BaseFilterProcessor {
 
     @Override
     public boolean checkUserProcessor(UserEntity userEntity) {
-        if (userEntity.getPhoneNumber().length() > 9) {
+        if (userEntity.getAge() >= 18) {
             return this.next(userEntity);
         }
+        System.out.println("Tuổi nhỏ hơn 18");
+
         return false;
     }
 }
