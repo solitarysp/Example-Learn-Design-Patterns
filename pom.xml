@@ -22,14 +22,17 @@
     </build>
     <modules>
         <module>BehavioralPatterns</module>
+        <module>CreationalDesignPatterns</module>
+        <module>StructuralPatterns</module>
+        <module>Other</module>
     </modules>
-<dependencies>
-    <dependency>
-        <groupId>org.projectlombok</groupId>
-        <artifactId>lombok</artifactId>
-        <optional>true</optional>
-        <version>1.18.10</version>
-    </dependency>
-</dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+            <version>1.18.10</version>
+        </dependency>
+    </dependencies>
 
 </project>
