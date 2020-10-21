@@ -20,16 +20,39 @@
             </plugin>
         </plugins>
     </build>
-    <modules>
-        <module>BehavioralPatterns</module>
-    </modules>
-<dependencies>
-    <dependency>
-        <groupId>org.projectlombok</groupId>
-        <artifactId>lombok</artifactId>
-        <optional>true</optional>
-        <version>1.18.10</version>
-    </dependency>
-</dependencies>
+    <profiles>
+        <profile>
+            <id>BehavioralPatterns</id>
+            <modules>
+                <module>BehavioralPatterns</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>CreationalDesignPatterns</id>
+            <modules>
+                <module>CreationalDesignPatterns</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>StructuralPatterns</id>
+            <modules>
+                <module>StructuralPatterns</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>Other</id>
+            <modules>
+                <module>Other</module>
+            </modules>
+        </profile>
+    </profiles>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+            <version>1.18.10</version>
+        </dependency>
+    </dependencies>
 
 </project>
