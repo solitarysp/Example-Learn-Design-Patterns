@@ -20,12 +20,32 @@
             </plugin>
         </plugins>
     </build>
-    <modules>
-        <module>BehavioralPatterns</module>
-        <module>CreationalDesignPatterns</module>
-        <module>StructuralPatterns</module>
-        <module>Other</module>
-    </modules>
+    <profiles>
+        <profile>
+            <id>BehavioralPatterns</id>
+            <modules>
+                <module>BehavioralPatterns</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>CreationalDesignPatterns</id>
+            <modules>
+                <module>CreationalDesignPatterns</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>StructuralPatterns</id>
+            <modules>
+                <module>StructuralPatterns</module>
+            </modules>
+        </profile>
+        <profile>
+            <id>Other</id>
+            <modules>
+                <module>Other</module>
+            </modules>
+        </profile>
+    </profiles>
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
