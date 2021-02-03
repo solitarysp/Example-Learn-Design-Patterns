@@ -16,6 +16,7 @@
         <module>BuilderPattern</module>
         <module>SingletonPattern</module>
         <module>PrototypePattern</module>
+        <module>DependencyInjection</module>
     </modules>
     <artifactId>CreationalDesignPatterns</artifactId>
 
